@@ -35,7 +35,7 @@ download_bash() {
     esac
     ui_print " => Downloading $bash_binary..."
     url="https://raw.githubusercontent.com/Magisk-Modules-Alt-Repo/mkshrc/master/common/bash/$bash_binary"
-    busybox wget -qO "$MODPATH/system/bin/bash" "$url"
+    wget -qO "$MODPATH/system/bin/bash" "$url"
 
     # Check if download was successful
     if [ $? -eq 0 ] && [ -f "$MODPATH/system/bin/bash" ]; then
